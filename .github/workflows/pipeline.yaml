@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout do Código
-      - use: actions/checkout@v3
+      - uses: actions/checkout@v3
       
       - name: Validar Sintaxe do HTML (HTMLHint)
       - run: |
