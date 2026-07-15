@@ -23,19 +23,19 @@ jobs:
       - use: actions/checkout@v3
       
       - name: Validar Sintaxe do HTML (HTMLHint)
-      - run: 
+      - run: |
           echo "Instalando o Validador de HTML"
           npm install -g htmlhint 
           echo "Executando análise"
           htmlhint indx.html
 
       - name: Validar Sintaxe do CSS (Stylelint)
-        run:
+        run: |
           echo "Instalando o validador de CSS"
           npm install -g stylelint stylelint-config-standard
           echo "Executando análise"
           npx stylelint style.css --config stylelint-config-standard
 
       - name: Validae Code (Simulação)
-        run:
+        run: |
           echo "Simulando teste automatizado"
