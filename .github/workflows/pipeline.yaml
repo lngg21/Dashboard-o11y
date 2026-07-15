@@ -6,13 +6,13 @@ on:
     branches:
       - main
       - develop
-      - feature
+      - feature/*
     
   pull_request:
     branches:
       - main
       - develop
-      - feature
+      - feature/*
 
 jobs:
   lint and test:
@@ -20,14 +20,14 @@ jobs:
 
     steps:
       - name: Checkout do Código
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       
       - name: Validar Sintaxe do HTML (HTMLHint)
-      - run: |
+        run: |
           echo "Instalando o Validador de HTML"
           npm install -g htmlhint 
           echo "Executando análise"
-          htmlhint indx.html
+          htmlhint index.html
 
       - name: Validar Sintaxe do CSS (Stylelint)
         run: |
