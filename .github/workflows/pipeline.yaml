@@ -19,23 +19,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do Código
+      - name: Code checkout
         uses: actions/checkout@v3
       
-      - name: Validar Sintaxe do HTML (HTMLHint)
+      - name: Validate HTML Sintax (HTMLHint)
         run: |
           echo "Instalando o Validador de HTML"
           npm install -g htmlhint 
           echo "Executando análise"
           htmlhint index.html
 
-      - name: Validar Sintaxe do CSS (Stylelint)
+      - name: Validate CSS Sintax (Stylelint)
         run: |
           echo "Instalando o validador de CSS"
           npm install -g stylelint stylelint-config-standard
           echo "Executando análise"
-          npx stylelint style.css --config stylelint-config-standard
+          npx stylelint style.css --config '{ "extends": ["stylelint-config-standard"] }'
 
-      - name: Validae Code (Simulação)
+      - name: Validate Code (Simulation)
         run: |
           echo "Simulando teste automatizado"
