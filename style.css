@@ -70,3 +70,12 @@ body {
   background-color: #0f172a;
   color: var(--accent-blue);
 }
+
+.topbar {
+background-color: var(--bg-card);
+border-bottom: 1px solid var(--border-color);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 2rem;
+}
