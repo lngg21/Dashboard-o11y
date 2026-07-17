@@ -72,31 +72,51 @@ body {
 }
 
 .topbar {
-background-color: var(--bg-card);
-border-bottom: 1px solid var(--border-color);
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0 2rem;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
 
 .search-box input {
-background-color: var(--bg-main);
-border: 1px solid var(--border-color);
-color: var(--text-main);
-padding: 0.5rem 1rem;
-border-radius: 6px;
-width: 300px;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  width: 300px;
 }
 
 .search-box input:focus {
-outline: 1px solid var(--accent-blue);
+  outline: 1px solid var(--accent-blue);
 }
 
 .avatar {
-background-color: var(--accent-blue);
-color: #000;
-padding: 0.5rem 1rem;
-border-radius: 20px;
-font-weight: bold;
+  background-color: var(--accent-blue);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.content-area {
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.status-badge {
+  background-color: rgba(74, 222, 128, 0.1);
+  color: var(--accent-green);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
 }
