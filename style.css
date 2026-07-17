@@ -79,3 +79,24 @@ align-items: center;
 justify-content: space-between;
 padding: 0 2rem;
 }
+
+.search-box input {
+background-color: var(--bg-main);
+border: 1px solid var(--border-color);
+color: var(--text-main);
+padding: 0.5rem 1rem;
+border-radius: 6px;
+width: 300px;
+}
+
+.search-box input:focus {
+outline: 1px solid var(--accent-blue);
+}
+
+.avatar {
+background-color: var(--accent-blue);
+color: #000;
+padding: 0.5rem 1rem;
+border-radius: 20px;
+font-weight: bold;
+}
