@@ -121,7 +121,7 @@ body {
   font-size: 0.875rem;
 }
 
-/* KPIs */
+/* Cards KPIs */
 .kip-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -134,4 +134,21 @@ body {
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid var(--border-color);
+}
+
+.kip-card h3 {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.kip-card .value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.trend-positive {
+  color: var(--accent-green);
+  font-size: 0.875rem;
 }
