@@ -142,10 +142,14 @@ body {
   text-transform: uppercase;
 }
 
-.kip-card .value {
+.kpi-card .value {
   font-size: 2rem;
   font-weight: bold;
   margin: 0.5rem 0;
+}
+
+.kpi-card .value-alert {
+  color: var(--accent-red);
 }
 
 .trend-positive {
@@ -155,4 +159,9 @@ body {
 
 .trend-negative {
   color: var(--accent-blue);
+}
+
+.trend-danger {
+  color: var(--accent-red);
+  font-size: 0.875rem;
 }
