@@ -37,4 +37,4 @@ jobs:
           echo '{"extends": ["stylelint-config-standard"]}' > .stylelintrc.json
           
           echo "Executando análise"
-          npx stylelint style.css
+          npx stylelint css/style.css
