@@ -245,3 +245,19 @@ body {
   background: var(--border-color);
   border-radius: 4px;
 }
+
+/* RESPONSIVITY */
+@media (max-widht: 768px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 70px 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
