@@ -110,7 +110,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin: 1rem;
 }
 
 .status-badge {
@@ -122,21 +122,21 @@ body {
 }
 
 /* Cards KPIs */
-.kip-grid {
+.kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.kip-card {
+.kpi-card {
   background-color: var(--bg-card);
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid var(--border-color);
 }
 
-.kip-card h3 {
+.kpi-card h3 {
   color: var(--text-muted);
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -166,7 +166,7 @@ body {
   font-size: 0.875rem;
 }
 
-/* CHART SECTION */
+/* CHART */
 .chart-section {
   background-color: var(--bg-card);
   padding: 1.5rem;
@@ -185,8 +185,49 @@ body {
 
 .bar {
   flex-grow: 1;
-  background: linear-gradient(to top, var(--accent-blue), trasparent);
+  background: var(--accent-blue);
   border-top: 2px solid var(--accent-blue);
   border-radius: 4px 4px 0 0;
   transition: height 0.5s;
+}
+
+/* LOGS */
+.logs-section {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.log-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.log-item {
+  display: grid;
+  grid-template-columns: 100px 150px 1fr;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.875rem;
+  background-color: var(--bg-main);
+}
+
+.log-item .error {
+  border-left: 4px solid var(--accent-red);
+}
+
+.log-item .info {
+  border-left: 4px solid var(--accent-green);
+}
+
+.timestamp {
+  color: var(--text-muted);
+}
+
+.service {
+  color: var(--accent-blue);
 }
