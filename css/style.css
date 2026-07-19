@@ -231,3 +231,17 @@ body {
 .service {
   color: var(--accent-blue);
 }
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
