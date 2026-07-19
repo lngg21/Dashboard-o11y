@@ -1,0 +1,42 @@
+name: Pipeline CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/*
+      - release/*
+    
+  pull_request:
+    branches:
+      - main
+      - develop
+      - feature/*
+      - release/*
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v3
+      
+      - name: Validar Sintaxe do HTML (HTMLHint)
+        run: |
+          echo "Instalando o Validador de HTML"
+          npm install -g htmlhint 
+          echo "Executando análise"
+          htmlhint index.html
+
+      - name: Validar Sintaxe do CSS (Stylelint)
+        run: |
+          echo "Instalando o validador de CSS"
+          npm install -g stylelint stylelint-config-standard
+          
+          echo "Criando arquivo de configuracao temporario..."
+          echo '{"extends": ["stylelint-config-standard"]}' > .stylelintrc.json
+          
+          echo "Executando análise"
+          npx stylelint css/style.css

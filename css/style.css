@@ -1,0 +1,247 @@
+:root {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-blue: #38bdf8;
+  --accent-green: #4ade80;
+  --accent-red: #f87171;
+  --border-color: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 70px 1fr;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: var(--bg-card);
+  grid-row: 1 / 3;
+  border-right: 1px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand h1 {
+  font-size: 1.25rem;
+  color: var(--accent-blue);
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #0f172a;
+  color: var(--accent-blue);
+}
+
+.topbar {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.search-box input {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  width: 300px;
+}
+
+.search-box input:focus {
+  outline: 1px solid var(--accent-blue);
+}
+
+.avatar {
+  background-color: var(--accent-blue);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.content-area {
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.status-badge {
+  background-color: rgb(74 222 128 / 10%); 
+  color: var(--accent-green);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+/* Cards KPIs */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.kpi-card h3 {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.kpi-card .value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.kpi-card .value-alert {
+  color: var(--accent-red);
+}
+
+.trend-positive {
+  color: var(--accent-green);
+  font-size: 0.875rem;
+}
+
+.trend-negative {
+  color: var(--accent-blue);
+}
+
+.trend-danger {
+  color: var(--accent-red);
+  font-size: 0.875rem;
+}
+
+/* CHART */
+.chart-section {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.chart-mock {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.bar {
+  flex-grow: 1;
+  background: var(--accent-blue);
+  border-top: 2px solid var(--accent-blue);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.5s;
+}
+
+/* LOGS */
+.logs-section {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.log-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.log-item {
+  display: grid;
+  grid-template-columns: 100px 150px 1fr;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.875rem;
+  background-color: var(--bg-main);
+}
+
+.log-item .error {
+  border-left: 4px solid var(--accent-red);
+}
+
+.log-item .info {
+  border-left: 4px solid var(--accent-green);
+}
+
+.timestamp {
+  color: var(--text-muted);
+}
+
+.service {
+  color: var(--accent-blue);
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
