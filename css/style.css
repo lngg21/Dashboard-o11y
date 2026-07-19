@@ -165,3 +165,28 @@ body {
   color: var(--accent-red);
   font-size: 0.875rem;
 }
+
+/* CHART SECTION */
+.chart-section {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.chart-mock {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.bar {
+  flex-grow: 1;
+  background: linear-gradient(to top, var(--accent-blue), trasparent);
+  border-top: 2px solid var(--accent-blue);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.5s;
+}
