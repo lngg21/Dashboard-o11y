@@ -186,4 +186,7 @@ body {
 .bar {
   flex-grow: 1;
   background: linear-gradient(to top, var(--accent-blue), trasparent);
+  border-top: 2px solid var(--accent-blue);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.5s;
 }
