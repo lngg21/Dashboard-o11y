@@ -255,6 +255,7 @@ body {
 }
 
 @media (max-width <= 768px) {
+
   .app-layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto 70px 1fr;
