@@ -248,14 +248,13 @@ body {
 
 /* RESPONSIVITY */
 
-@media (max-width <= 1024px) {
+@media (width <= 1024px) {
   .kpi-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width <= 768px) {
-
+@media (width <= 768px) {
   .app-layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto 70px 1fr;
