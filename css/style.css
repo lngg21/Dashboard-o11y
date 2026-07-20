@@ -245,3 +245,26 @@ body {
   background: var(--border-color);
   border-radius: 4px;
 }
+
+/* RESPONSIVITY */
+
+@media (width <= 1024px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 768px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 70px 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
